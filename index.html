@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rede — A Colmeia Viva</title>
+  <style>
+    :root { --ice:#f5f6f7; --card:#e9ebed; --lead:#3f4246; --gold:#c9a227; --text:#242629; --muted:#666; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--ice); color:var(--text); font:16px Arial,sans-serif; line-height:1.55; }
+    header { position:sticky; top:0; z-index:10; background:#f5f6f7ee; backdrop-filter:blur(8px); border-bottom:1px solid #d2d4d6; }
+    .nav { max-width:1150px; margin:auto; padding:13px 18px; display:flex; align-items:center; justify-content:space-between; gap:15px; }
+    .brand { font-weight:800; font-size:1.35rem; }
+    nav button, .back { border:0; background:transparent; padding:8px 10px; border-radius:9px; cursor:pointer; }
+    nav button:hover, .back:hover { background:var(--lead); color:#fff; }
+    main { max-width:1150px; margin:auto; padding:30px 18px 70px; }
+    .view { display:none; }
+    .view.active { display:block; }
+    .panel { background:#fff; border:1px solid var(--gold); border-radius:24px; padding:30px; margin-bottom:24px; box-shadow:0 8px 24px #0000000d; }
+    .hero { text-align:center; }
+    .hero h1 { font-size:clamp(2rem,5vw,3.4rem); margin:4px 0; }
+    .motto { font-style:italic; color:var(--muted); }
+    .bee { font-size:3rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; }
+    .tile { background:var(--card); border:1px solid #cfd2d5; border-radius:18px; padding:22px; cursor:pointer; text-align:center; transition:.15s; }
+    .tile:hover { border-color:var(--gold); box-shadow:0 7px 18px #00000012; transform:translateY(-2px); }
+    .icon { font-size:2.1rem; }
+    .tile h3 { margin:9px 0 4px; }
+    .tile p { margin:0; color:var(--muted); font-size:.9rem; }
+    .status { display:inline-block; margin-top:10px; font-size:.75rem; border:1px solid #bbb; padding:3px 8px; border-radius:999px; background:#fff; }
+    .title { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+    .title h2 { margin:0; }
+    .crumb { color:var(--muted); font-size:.9rem; }
+    .notice { padding:14px 16px; background:#f7f7f7; border-left:4px solid var(--gold); border-radius:10px; }
+    footer { text-align:center; padding:25px; color:var(--muted); font-size:.82rem; }
+    @media(max-width:700px) { .nav { align-items:flex-start; flex-direction:column; } .panel { padding:22px; } nav { display:flex; flex-wrap:wrap; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">🕸️ Rede</div>
+    <nav aria-label="Navegação principal">
+      <button onclick="showView('home')">Colmeia</button>
+      <button onclick="showView('caixa01')">Caixa 01</button>
+      <button onclick="showView('historia')">História</button>
+      <button onclick="showView('participar')">Participar</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section id="home" class="view active">
+    <div class="panel hero">
+      <div class="bee">🐝</div>
+      <h1>A Colmeia Viva</h1>
+      <p class="motto">Cada um escreve a sua história. Juntos, deixamos um legado.</p>
+      <p>A Rede está sendo construída passo a passo. Entre, observe a primeira Colmeia e acompanhe sua evolução.</p>
+      <div class="notice"><strong>Estamos apenas no primeiro quadro da primeira caixa.</strong><br>O que você vê hoje é o começo.</div>
+      <p style="margin-top:24px"><button class="back" onclick="showView('caixa01')">🐝 Entrar na Colmeia →</button></p>
+    </div>
+    <div class="panel">
+      <h2>🐝 Entre na Colmeia</h2>
+      <div class="grid">
+        <div class="tile" onclick="showView('caixa01')"><div class="icon">📦</div><h3>Caixa 01</h3><p>Veja a primeira caixa da Colmeia.</p></div>
+        <div class="tile" onclick="showView('historia')"><div class="icon">📜</div><h3>História</h3><p>Acompanhe a construção.</p></div>
+        <div class="tile" onclick="showView('participar')"><div class="icon">💡</div><h3>Observar e Participar</h3><p>Conheça a proposta de participação.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="caixa01" class="view">
+    <div class="panel">
+      <div class="title"><h2>📦 Caixa 01 — Primeira Colmeia</h2><button class="back" onclick="showView('home')">🐝 Voltar</button></div>
+      <p class="crumb">Colmeia → Caixa 01</p>
+      <p>Esta é a primeira caixa da Rede. Seus quadros serão preenchidos progressivamente conforme a Colmeia evolui.</p>
+      <div class="grid">
+        <div class="tile" onclick="showView('quadro01')"><div class="icon">🍯</div><h3>Quadro 01</h3><p>Primeiro quadro da primeira caixa.</p><span class="status">Em construção</span></div>
+        <div class="tile"><div class="icon">⬡</div><h3>Quadro 02</h3><p>Espaço reservado para o futuro.</p><span class="status">Futuro</span></div>
+        <div class="tile"><div class="icon">⬡</div><h3>Quadro 03</h3><p>Espaço reservado para o futuro.</p><span class="status">Futuro</span></div>
+        <div class="tile"><div class="icon">⬡</div><h3>Quadro 04</h3><p>Espaço reservado para o futuro.</p><span class="status">Futuro</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quadro01" class="view">
+    <div class="panel">
+      <div class="title"><h2>🍯 Quadro 01 — Em construção</h2><button class="back" onclick="showView('caixa01')">🐝 Voltar</button></div>
+      <p class="crumb">Colmeia → Caixa 01 → Quadro 01</p>
+      <p>Este é o primeiro espaço de conteúdo da Rede. Os fundamentos e capítulos serão organizados progressivamente.</p>
+      <div class="grid">
+        <div class="tile"><div class="icon">🧭</div><h3>Fundamentos</h3><p>Propósito, valores e princípios da Rede.</p><span class="status">Próxima etapa</span></div>
+        <div class="tile"><div class="icon">🕸️</div><h3>Organograma</h3><p>Estrutura e níveis da Rede.</p><span class="status">Consolidado</span></div>
+        <div class="tile"><div class="icon">🏆</div><h3>Ascensão</h3><p>Mérito, estabilidade e evolução.</p><span class="status">Consolidado</span></div>
+        <div class="tile"><div class="icon">🍯</div><h3>Drop Coins</h3><p>Moeda virtual da Rede.</p><span class="status">Consolidado</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia" class="view">
+    <div class="panel">
+      <div class="title"><h2>📜 História da Construção</h2><button class="back" onclick="showView('home')">🐝 Voltar</button></div>
+      <p class="crumb">Colmeia → História</p>
+      <div class="notice"><strong>Primeiro marco:</strong> criação da primeira caixa e publicação da Colmeia Viva.</div>
+      <div class="grid" style="margin-top:18px">
+        <div class="tile"><div class="icon">📦</div><h3>Primeira Caixa</h3><p>A estrutura inicial foi colocada no campo.</p></div>
+        <div class="tile"><div class="icon">🖼️</div><h3>Primeiro Quadro</h3><p>O primeiro espaço começou a receber conteúdo.</p></div>
+        <div class="tile"><div class="icon">🌱</div><h3>Próximos Quadros</h3><p>Serão preenchidos conforme o projeto evoluir.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="participar" class="view">
+    <div class="panel">
+      <div class="title"><h2>💡 Observar e Participar</h2><button class="back" onclick="showView('home')">🐝 Voltar</button></div>
+      <p class="crumb">Colmeia → Participação</p>
+      <p>A construção da Rede poderá ser acompanhada por pessoas interessadas no projeto.</p>
+      <div class="grid">
+        <div class="tile"><div class="icon">👀</div><h3>Observar</h3><p>Acompanhar o que está sendo construído.</p></div>
+        <div class="tile"><div class="icon">💡</div><h3>Sugerir</h3><p>Apresentar ideias e propostas.</p></div>
+        <div class="tile"><div class="icon">❓</div><h3>Perguntar</h3><p>Levantar dúvidas.</p></div>
+        <div class="tile"><div class="icon">🤝</div><h3>Colaborar</h3><p>Contribuir para o desenvolvimento futuro.</p></div>
+      </div>
+      <p class="notice" style="margin-top:20px"><strong>Importante:</strong> sugestão não é decisão oficial. Conteúdos em desenvolvimento serão identificados como tal.</p>
+    </div>
+  </section>
+</main>
+<footer>Rede — A Colmeia Viva · Projeto em construção.</footer>
+<script>
+function showView(id) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  const target = document.getElementById(id);
+  if (target) target.classList.add('active');
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+</script>
+</body>
+</html>
