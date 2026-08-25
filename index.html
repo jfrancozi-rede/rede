@@ -12,29 +12,29 @@
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--ice); color:var(--text); font-family:'Nunito',Arial,sans-serif; font-size:16px; line-height:1.55; }
-    h1,h2,h3,.brand,nav button,.back,.motto { font-family:'Kalam','Nunito',Arial,sans-serif; }
+    h1,h2,h3,.brand,nav button,.back,.motto { font-family:'Kalam','Nunito',Arial,sans-serif; font-weight:400; }
     header { position:sticky; top:0; z-index:10; background:#f5f6f7ee; backdrop-filter:blur(8px); border-bottom:1px solid #d2d4d6; }
     .nav { max-width:1150px; margin:auto; padding:13px 18px; display:flex; align-items:center; justify-content:space-between; gap:15px; }
-    .brand { font-weight:700; font-size:1.45rem; }
-    nav button, .back { border:0; background:transparent; padding:8px 10px; border-radius:9px; cursor:pointer; font-size:1rem; font-weight:700; }
+    .brand { font-size:1.45rem; }
+    nav button, .back { border:0; background:transparent; padding:8px 10px; border-radius:9px; cursor:pointer; font-size:1rem; }
     nav button:hover, .back:hover { background:var(--lead); color:#fff; }
     main { max-width:1150px; margin:auto; padding:30px 18px 70px; }
     .view { display:none; }
     .view.active { display:block; }
     .panel { background:#fff; border:1px solid var(--gold); border-radius:24px; padding:30px; margin-bottom:24px; box-shadow:0 8px 24px #0000000d; }
     .hero { text-align:center; }
-    .hero h1 { font-size:clamp(2.3rem,6vw,4rem); margin:4px 0; font-weight:700; }
-    .motto { font-size:1.15rem; font-weight:400; color:var(--muted); }
+    .hero h1 { font-size:clamp(2.3rem,6vw,4rem); margin:4px 0; }
+    .motto { font-size:1.15rem; color:var(--muted); }
     .bee { font-size:3rem; }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; }
     .tile { background:var(--card); border:1px solid #cfd2d5; border-radius:18px; padding:22px; cursor:pointer; text-align:center; transition:.15s; }
     .tile:hover { border-color:var(--gold); box-shadow:0 7px 18px #00000012; transform:translateY(-2px); }
     .icon { font-size:2.1rem; }
-    .tile h3 { margin:9px 0 4px; font-weight:700; }
+    .tile h3 { margin:9px 0 4px; }
     .tile p { margin:0; color:var(--muted); font-size:.9rem; }
     .status { display:inline-block; margin-top:10px; font-size:.75rem; border:1px solid #bbb; padding:3px 8px; border-radius:999px; background:#fff; }
     .title { display:flex; justify-content:space-between; align-items:center; gap:10px; }
-    .title h2 { margin:0; font-weight:700; }
+    .title h2 { margin:0; }
     .crumb { color:var(--muted); font-size:.9rem; }
     .notice { padding:14px 16px; background:#f7f7f7; border-left:4px solid var(--gold); border-radius:10px; }
     .content { max-width:900px; margin:auto; }
@@ -42,7 +42,7 @@
     .content p { margin:8px 0; }
     .principles { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:18px; }
     .principle { background:var(--card); border:1px solid #cfd2d5; border-radius:16px; padding:18px; }
-    .principle h4 { font-family:'Kalam','Nunito',Arial,sans-serif; font-size:1.25rem; margin:0 0 5px; }
+    .principle h4 { font-family:'Kalam','Nunito',Arial,sans-serif; font-size:1.25rem; font-weight:400; margin:0 0 5px; }
     footer { text-align:center; padding:25px; color:var(--muted); font-size:.82rem; }
     @media(max-width:700px) { .nav { align-items:flex-start; flex-direction:column; } .panel { padding:22px; } nav { display:flex; flex-wrap:wrap; } }
   </style>
@@ -99,18 +99,14 @@
       <p class="crumb">Colmeia → Caixa 01 → Quadro 01</p>
       <div class="content">
         <p class="notice"><strong>Primeiro conteúdo oficial da Colmeia Digital.</strong><br>Este quadro reúne a base conceitual da Rede e será ampliado progressivamente.</p>
-
         <h3>🕸️ O que é a Rede?</h3>
         <p>A Rede é um organismo vivo de relações humanas, construído para promover cooperação, disciplina e harmonia como pilares do crescimento individual e do fortalecimento coletivo.</p>
         <p>Cada associado participa ativamente dessa construção, contribuindo com seus dons, talentos e recursos para gerar benefícios que ultrapassam o âmbito pessoal e alcançam toda a comunidade.</p>
-
         <h3>🐝 A inspiração da Colmeia</h3>
         <p>A Rede utiliza a colmeia como representação de uma estrutura viva: cada espaço tem sua função, cada participante possui seu lugar e a construção acontece pela participação de muitos.</p>
         <p>O propósito não é fazer pessoas iguais, mas permitir que diferentes capacidades contribuam para uma estrutura comum.</p>
-
         <h3>🧭 Propósito</h3>
         <p>O propósito da Rede é cultivar relações humanas baseadas em cooperação, disciplina e harmonia, favorecendo o desenvolvimento individual e o fortalecimento coletivo.</p>
-
         <h3>📌 Princípios que orientam a construção</h3>
         <div class="principles">
           <div class="principle"><h4>🤝 Cooperação</h4><p>Crescer junto, compartilhar capacidades e fortalecer o coletivo.</p></div>
@@ -120,7 +116,6 @@
           <div class="principle"><h4>🤲 Contribuição</h4><p>Usar dons, talentos e recursos para produzir benefícios coletivos.</p></div>
           <div class="principle"><h4>🔎 Transparência</h4><p>Construir uma estrutura compreensível e acompanhável por seus participantes.</p></div>
         </div>
-
         <h3>🍯 Uma Colmeia em construção</h3>
         <p>A primeira caixa representa o início dessa construção. Seus quadros e espaços serão preenchidos progressivamente, conforme os fundamentos, regras e experiências da Rede forem consolidados.</p>
         <p>O projeto permanece em construção e suas definições oficiais serão preservadas conforme forem avaliadas e aprovadas pelo Apicultor.</p>
