@@ -23,9 +23,9 @@
     .view.active { display:block; }
     .panel { background:#fff; border:1px solid var(--gold); border-radius:24px; padding:30px; margin-bottom:24px; box-shadow:0 8px 24px #0000000d; }
     .hero { text-align:center; }
+    .hero .hero-symbol { font-size:3rem; line-height:1; margin-bottom:4px; }
     .hero h1 { font-size:clamp(2.3rem,6vw,4rem); margin:4px 0; }
     .motto { font-size:2rem; line-height:1.2; color:var(--muted); margin:8px 0 18px; }
-    .bee { font-size:3rem; }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; }
     .tile { background:var(--card); border:1px solid #d5d7d9; border-radius:18px; padding:22px; cursor:pointer; text-align:center; transition:.15s; }
     .tile:hover { border-color:var(--gold); box-shadow:0 7px 18px #00000012; transform:translateY(-2px); }
@@ -62,7 +62,7 @@
 <main>
   <section id="home" class="view active">
     <div class="panel hero">
-      <div class="bee">🐝</div>
+      <div class="hero-symbol">⬡</div>
       <h1>Rede</h1>
       <p class="motto">🐝 Uma colmeia viva em movimento</p>
       <p>A Rede está sendo construída passo a passo. Entre, observe a primeira Colmeia e acompanhe sua evolução.</p>
