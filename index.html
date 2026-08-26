@@ -8,11 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --ice:#f5f6f7; --card:#e9ebed; --lead:#3f4246; --gold:#c9a227; --text:#242629; --muted:#666; }
+    :root { --ice:#f5f6f7; --card:#f0f1f2; --fixed:#fff9dc; --lead:#3f4246; --gold:#c9a227; --text:#242629; --muted:#666; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--ice); color:var(--text); font-family:'Nunito',Arial,sans-serif; font-size:16px; line-height:1.55; }
-    h1,h2,h3,.brand,nav button,.back,.motto { font-family:'Kalam','Nunito',Arial,sans-serif; font-weight:400; }
+    h1,h2,h3,.brand,nav button,.back,.motto,.principle h4 { font-family:'Kalam','Nunito',Arial,sans-serif; font-weight:400; }
     header { position:sticky; top:0; z-index:10; background:#f5f6f7ee; backdrop-filter:blur(8px); border-bottom:1px solid #d2d4d6; }
     .nav { max-width:1150px; margin:auto; padding:13px 18px; display:flex; align-items:center; justify-content:space-between; gap:15px; }
     .brand { font-size:1.45rem; }
@@ -24,27 +24,27 @@
     .panel { background:#fff; border:1px solid var(--gold); border-radius:24px; padding:30px; margin-bottom:24px; box-shadow:0 8px 24px #0000000d; }
     .hero { text-align:center; }
     .hero h1 { font-size:clamp(2.3rem,6vw,4rem); margin:4px 0; }
-    .motto { font-size:1.15rem; color:var(--muted); }
+    .motto { font-size:2rem; line-height:1.2; color:var(--muted); margin:8px 0 18px; }
     .bee { font-size:3rem; }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; }
-    .tile { background:var(--card); border:1px solid #cfd2d5; border-radius:18px; padding:22px; cursor:pointer; text-align:center; transition:.15s; }
+    .tile { background:var(--card); border:1px solid #d5d7d9; border-radius:18px; padding:22px; cursor:pointer; text-align:center; transition:.15s; }
     .tile:hover { border-color:var(--gold); box-shadow:0 7px 18px #00000012; transform:translateY(-2px); }
     .icon { font-size:2.1rem; }
-    .tile h3 { margin:9px 0 4px; }
+    .tile h3 { margin:9px 0 4px; font-size:1.25rem; }
     .tile p { margin:0; color:var(--muted); font-size:.9rem; }
     .status { display:inline-block; margin-top:10px; font-size:.75rem; border:1px solid #bbb; padding:3px 8px; border-radius:999px; background:#fff; }
     .title { display:flex; justify-content:space-between; align-items:center; gap:10px; }
-    .title h2 { margin:0; }
+    .title h2 { margin:0; font-size:2rem; line-height:1.2; }
     .crumb { color:var(--muted); font-size:.9rem; }
     .notice { padding:14px 16px; background:#f7f7f7; border-left:4px solid var(--gold); border-radius:10px; }
     .content { max-width:900px; margin:auto; }
-    .content h3 { font-size:1.45rem; margin:28px 0 8px; }
+    .content h3 { font-size:1.25rem; margin:28px 0 8px; }
     .content p { margin:8px 0; }
     .principles { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:18px; }
-    .principle { background:var(--card); border:1px solid #cfd2d5; border-radius:16px; padding:18px; }
-    .principle h4 { font-family:'Kalam','Nunito',Arial,sans-serif; font-size:1.25rem; font-weight:400; margin:0 0 5px; }
+    .principle { background:var(--fixed); border:1px solid #eadb91; border-radius:16px; padding:18px; }
+    .principle h4 { font-size:1.25rem; margin:0 0 5px; }
     footer { text-align:center; padding:25px; color:var(--muted); font-size:.82rem; }
-    @media(max-width:700px) { .nav { align-items:flex-start; flex-direction:column; } .panel { padding:22px; } nav { display:flex; flex-wrap:wrap; } }
+    @media(max-width:700px) { .nav { align-items:flex-start; flex-direction:column; } .panel { padding:22px; } nav { display:flex; flex-wrap:wrap; } .motto { font-size:1.7rem; } }
   </style>
 </head>
 <body>
@@ -63,8 +63,8 @@
   <section id="home" class="view active">
     <div class="panel hero">
       <div class="bee">🐝</div>
-      <h1>A Colmeia Viva</h1>
-      <p class="motto">Cada um escreve a sua história. Juntos, deixamos um legado.</p>
+      <h1>Rede</h1>
+      <p class="motto">Uma colmeia viva em movimento</p>
       <p>A Rede está sendo construída passo a passo. Entre, observe a primeira Colmeia e acompanhe sua evolução.</p>
       <div class="notice"><strong>Estamos apenas no primeiro quadro da primeira caixa.</strong><br>O que você vê hoje é o começo.</div>
       <p style="margin-top:24px"><button class="back" onclick="showView('caixa01')">🐝 Entrar na Colmeia →</button></p>
